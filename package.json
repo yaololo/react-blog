@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "cd client && yarn start"
-  }
+    "start": "cd client && yarn start",
+    "test": "cd client && yarn test"
+  },
+  "repository": "git@github.com:yaololo/react-blog.git",
+  "author": "zhuangyongming <yongming.zhuang@moneysmart.com>",
+  "license": "MIT"
 }
