@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "install": "cd client&&yarn",
     "start": "cd client&&yarn start",
     "test": "cd client&&yarn test",
     "build": "cd client&&yarn build"
