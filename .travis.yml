@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+- 8.11.3
+cache:
+  yarn: true
+  directories:
+  - node_modules
+before_install:
+- curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.13.0
+- export PATH="$HOME/.yarn/bin:$PATH"
+jobs:
+  include:
+  - stage: Test, Build and Deploy
+    branch:
+      on:
+      - master
+      - dev
+    script:
+    - yarn test
+    - yarn build
+    deploy:
+      provider: heroku
+      app: yongming-blog
+      api_key:
+        secure: lfCb69Tx302Ak+OOvKwjgUVsbn+g+6xPfSrTx9vzvnqszx+vUpbxkr2wXg8fEPaEL60joEcPjQPV7F1UaCg7hRVWEMFisDNBFhmLobeNdQDzmXZyGYkmNN59oIDhouaJwTIpB2aAlgzpYndChtNRF5C4dAzdFAhaIci8mxnGzfDZ08JTNY3t/TIGqog0gD11AJuRkgQyxjuztZfbzO3pUMYCOvXGIhETQO0Abbz3CA7vIq2crmafbjAjDffEO421Og1DzBlDQbfjbqE/qj99JFAPmMJZTGb3YC6CfSWAL8aDWwn0qiPXx4g3AWSD0fWBxTXbzXBhynNO1dSwCgYLsSYYLwQmwBLM55gVio1lq43hISesMVmbr7KDjcWWcajtzBGZrvfOFsW2BaXNyT4WGUBnVznU8O1yuyFFQ6ea1ITaFHmnqxiptsX+fzKptUoBsQDulmwcbODd1ZNHE9cvn6cQVUG/yuT9suYZyz3ZqwBlHP/PKfnUPRwHGaXMSbmn94EtJJpJuzqOgfMNrn4zIdU+uWaF2fnx8RgoM9UsTlegdgYrhl3cqrHmlEosHnzu7tvhHl7JrCZkycpATXkcJVe0rNBKclQeZz6s8DXrvRUMxvevqFSRJyP4LP0xqO/ookNEBt03EivXvz7CEwsYu0+siXY4j/FBlsM2g1JuJ2A=
