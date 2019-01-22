@@ -4,7 +4,12 @@
   "private": true,
   "scripts": {
     "start": "cd client && yarn start",
-    "test": "cd client && yarn test"
+    "test": "cd client && yarn test",
+    "build": "cd client && yarn build"
+  },
+  "engines": {
+    "node": "8.11.3",
+    "yarn": "1.13.0"
   },
   "repository": "git@github.com:yaololo/react-blog.git",
   "author": "zhuangyongming <yongming.zhuang@moneysmart.com>",
