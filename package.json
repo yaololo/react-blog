@@ -1,5 +1,8 @@
 {
   "name": "blog",
   "version": "0.1.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "cd client && yarn start"
+  }
 }
