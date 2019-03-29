@@ -9,8 +9,10 @@ class App extends Component {
 
   componentDidMount(){
     fetch('/', {
-      method: 'GET',
-      'Content-Type': 'application/json'
+      method: 'get',
+      headers: {
+        'Content-Type': 'application/json'
+      }
     }).then(response => {
       if(!response.ok){
         console.log('app crash');
@@ -18,7 +20,7 @@ class App extends Component {
       }
 
       response.json().then(json => {
-        this.setState({ data: json.data  });
+        this.setState({ data: json.data });
       }).catch(error => {
         console.log(error);
       })
