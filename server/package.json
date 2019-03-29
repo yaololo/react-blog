@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "engines": {
+    "node": "8.11.3",
+    "yarn": "1.5.1"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "node_modules"
+  ],
+  "repository": "git@github.com:yaololo/react-blog.git",
+  "author": "zhuangyongming <yongming.zhuang@moneysmart.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}
