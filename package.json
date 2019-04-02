@@ -6,7 +6,7 @@
     "install": "cd client&&yarn",
     "start": "cd client&&yarn start",
     "test": "cd client&&yarn test",
-    "build": "cd client&&yarn build",
+    "build": "cd client && yarn install && yarn build",
     "heroku-postbuild": "yarn build",
     "start:prod:server": "cd server&&yarn start"
   },
