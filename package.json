@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "install": "cd client&&yarn",
-    "start": "cd client&&yarn start",
+    "start": "node index.js",
+    "start:client": "cd client&&yarn start",
     "test": "cd client&&yarn test",
     "build": "cd client && yarn install && yarn build",
     "heroku-postbuild": "yarn build",
-    "start:prod:server": "cd server&&yarn start"
+    "start:prod:server": "cd server && yarn install && yarn start"
   },
   "engines": {
     "node": "8.11.3",
