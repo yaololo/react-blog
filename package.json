@@ -6,7 +6,8 @@
     "install": "cd client&&yarn",
     "start": "cd client&&yarn start",
     "test": "cd client&&yarn test",
-    "build": "cd client&&yarn build"
+    "build": "cd client&&yarn build",
+    "heroku-postbuild": "yarn build"
   },
   "engines": {
     "node": "8.11.3",
