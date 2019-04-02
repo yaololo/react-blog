@@ -8,7 +8,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    fetch('/', {
+    fetch('/api', {
       method: 'get',
       headers: {
         'Content-Type': 'application/json'
