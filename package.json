@@ -7,7 +7,8 @@
     "start": "cd client&&yarn start",
     "test": "cd client&&yarn test",
     "build": "cd client&&yarn build",
-    "heroku-postbuild": "yarn build"
+    "heroku-postbuild": "yarn build",
+    "start:prod:server": "cd server&&yarn start"
   },
   "engines": {
     "node": "8.11.3",
